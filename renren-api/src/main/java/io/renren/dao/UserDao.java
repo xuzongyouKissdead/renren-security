@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 人人开源 http://www.renren.io
+ * Copyright 2018 百草堂开源 http://www.renren.io
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -18,6 +18,7 @@ package io.renren.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import io.renren.entity.UserEntity;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 用户
@@ -26,6 +27,7 @@ import io.renren.entity.UserEntity;
  * @email sunlightcs@gmail.com
  * @date 2017-03-23 15:22:06
  */
+@Mapper
 public interface UserDao extends BaseMapper<UserEntity> {
 
 }
