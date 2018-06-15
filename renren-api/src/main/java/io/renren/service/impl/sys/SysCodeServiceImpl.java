@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class SysCodeServiceImpl implements SysCodeService{
     @Autowired
     RedisUtils redisUtils;
-    //发送短信验证码你那个存储到缓存
+    //发送短信验证码存储到缓存
     @Override
     public void sendSysCode(SysCodeForm sysCodeForm) {
         if(!StringUtils.isEmpty(sysCodeForm.getMobile())){

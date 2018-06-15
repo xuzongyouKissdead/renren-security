@@ -25,7 +25,7 @@ public class ApiRegisterController {
     @ApiOperation("注册")
     public BaseResponseEntity register(@RequestBody RegisterForm form){
         //表单校验
-        ValidatorUtils.validateEntity(form);
+        //ValidatorUtils.validateEntity(form);
         return io.renren.form.builders.R.success(userService.register(form));
     }
 }
