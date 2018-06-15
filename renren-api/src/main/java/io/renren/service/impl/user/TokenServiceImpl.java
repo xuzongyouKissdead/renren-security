@@ -14,13 +14,13 @@
  * the License.
  */
 
-package io.renren.service.impl;
+package io.renren.service.impl.user;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import io.renren.dao.TokenDao;
 import io.renren.entity.TokenEntity;
-import io.renren.service.TokenService;
+import io.renren.service.userService.TokenService;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

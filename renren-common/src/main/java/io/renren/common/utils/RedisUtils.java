@@ -49,6 +49,8 @@ public class RedisUtils {
     public final static long DEFAULT_EXPIRE = 60 * 60 * 24;
     /**  不设置过期时长 */
     public final static long NOT_EXPIRE = -1;
+    /**设置验证码过期时间*/
+    public final static long SYSCODE_EXPIRE = 60;
 
     public void set(String key, Object value, long expire){
         valueOperations.set(key, toJson(value));
@@ -106,4 +108,5 @@ public class RedisUtils {
     private <T> T fromJson(String json, Class<T> clazz){
         return JSON.parseObject(json, clazz);
     }
+
 }

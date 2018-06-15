@@ -14,34 +14,29 @@
  * the License.
  */
 
-package io.renren.form;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-
-import javax.validation.constraints.NotBlank;
-
+package io.renren.models;
 
 /**
- * 注册表单
+ * Redis所有Keys
  *
  * @author Mark sunlightcs@gmail.com
- * @since 3.1.0 2018-01-25
+ * @since 3.0.0 2017-07-18
  */
-@ApiModel(value = "注册表单")
-@Data
-public class RegisterForm extends BaseRequestForm {
-    @ApiModelProperty(value = "手机号")
-    @NotBlank(message = "手机号不能为空")
-    private String mobile;
+public class ApiRedisKeys {
 
-    @ApiModelProperty(value = "密码")
-    @NotBlank(message = "密码不能为空")
-    private String password;
+    public static String getSysConfigKey(String key){
+        return "sys:config:" + key;
+    }
 
-    @ApiModelProperty(value = "验证码")
-    @NotBlank(message = "验证码不能为空")
-    private String SysCode;
+    public static String getShiroSessionKey(String key){
+        return "sessionid:" + key;
+    }
+    public static String getSysCodeKey(String key){
+        return "sysCode:" + key;
+    }
+    public static String getSessiond(String key){
+        return "sessiond:" + key;
+    }
+
 
 }

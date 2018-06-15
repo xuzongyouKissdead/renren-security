@@ -14,7 +14,7 @@
  * the License.
  */
 
-package io.renren.service;
+package io.renren.service.userService;
 
 import com.baomidou.mybatisplus.service.IService;
 import io.renren.entity.TokenEntity;

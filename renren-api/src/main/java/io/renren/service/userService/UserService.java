@@ -14,21 +14,24 @@
  * the License.
  */
 
-package io.renren.service;
+package io.renren.service.userService;
 
 
 import com.baomidou.mybatisplus.service.IService;
 import io.renren.entity.UserEntity;
 import io.renren.form.LoginForm;
+import io.renren.form.RegisterForm;
+import io.renren.form.response.RegisterReponse;
+import io.renren.form.response.SessionResponse;
 
 import java.util.Map;
 
 /**
  * 用户
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-23 15:22:06
+ * @author xuzongyou
+ * @email
+ *
  */
 public interface UserService extends IService<UserEntity> {
 
@@ -39,5 +42,9 @@ public interface UserService extends IService<UserEntity> {
 	 * @param form    登录表单
 	 * @return        返回登录信息
 	 */
-	Map<String, Object> login(LoginForm form);
+	SessionResponse login(LoginForm form);
+
+	//用户注册
+	SessionResponse register(RegisterForm registerForm);
+
 }
